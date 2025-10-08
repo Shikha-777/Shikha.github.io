@@ -2,36 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Shikha - Personal Site</title>
+  <title>Shikha - Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: sans-serif;
-      max-width: 700px;
-      margin: 50px auto;
-      padding: 0 20px;
-      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
       color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
     }
+
+    .card {
+      background: white;
+      padding: 40px 30px;
+      max-width: 600px;
+      width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid #007acc;
+    }
+
     h1 {
+      margin: 0;
+      font-size: 28px;
       color: #2c3e50;
     }
-    a {
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 20px 0;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      background-color: #007acc;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    a.button:hover {
+      background-color: #005f99;
+    }
+
+    a.email-link {
       color: #007acc;
       text-decoration: none;
     }
-    a:hover {
+
+    a.email-link:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Shikha</h1>
-  <p>Hi! I am Shikha. I am currently a first-year PhD student in the Division of Computational and Data Sciences at McKelvey School of Engineering.</p>
+  <div class="card">
+    <!-- Optional: Add a profile picture named 'profile.jpg' in your repo -->
+    <img src="profile.jpg" alt="Shikha" class="avatar" onerror="this.style.display='none'">
 
-  <p>You can <a href="cv.pdf" target="_blank">view my CV here</a>.</p>
+    <h1>Shikha</h1>
+    <p>Hi! I am Shikha. I am currently a first-year PhD student in the Division of Computational and Data Sciences at McKelvey School of Engineering.</p>
 
-  <p>Feel free to reach out to me via 
-     <a href="mailto:dshrestha@wustl.edu">email</a>  
-     </p>
+    <a href="cv.pdf" target="_blank" class="button">📄 View My CV</a>
+
+    <p>Contact me via <a href="mailto:dshrestha@wustl.edu" class="email-link">email</a>.</p>
+  </div>
 </body>
 </html>
